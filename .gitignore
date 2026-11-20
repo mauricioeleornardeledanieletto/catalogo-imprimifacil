@@ -1,0 +1,18 @@
+# dependências (recriadas com npm install)
+node_modules/
+
+# variáveis secretas (endereço do banco, chave do login...)
+.env
+
+# configurações da vercel no computador
+.vercel/
+
+# configurações locais do editor
+.claude/
+.vscode/
+
+# arquivos temporários e do sistema
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,134 @@
+.painel-admin {
+  --roxo: #4e488e;
+  --roxo-escuro: #383366;
+  --roxo-claro: #6a63b5;
+  --verde: #9bc21b;
+  --verde-escuro: #6f8b13;
+  --vermelho: #c64b4b;
+  --tinta: #241f3d;
+  --papel: #fbfaf8;
+  --lilas: #f1effa;
+  --linha: #e5e1f0;
+  --suave: #726b8c;
+
+  /* troca as cores/fonte padrão do bootstrap pelas da marca */
+  --bs-body-font-family: "Manrope", sans-serif;
+  --bs-body-color: var(--tinta);
+  --bs-body-bg: var(--papel);
+  --bs-border-color: var(--linha);
+  --bs-border-radius: 12px;
+  --bs-primary-rgb: 78, 72, 142;
+  --bs-link-color-rgb: 78, 72, 142;
+  --bs-focus-ring-color: rgba(106, 99, 181, .25);
+  -webkit-font-smoothing: antialiased;
+}
+
+.painel-admin .titulo-display {
+  font-family: "Bebas Neue", sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .01em;
+}
+.painel-admin .rotulo {
+  font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+}
+.painel-admin .link-suave { color: var(--suave); text-decoration: none; }
+.painel-admin .link-suave:hover { color: var(--roxo); }
+
+.painel-admin .btn { border-radius: 999px; font-weight: 700; font-size: .86rem; padding: .6rem 1.2rem; }
+.painel-admin .btn-sm { font-size: .76rem; padding: .35rem .85rem; }
+.painel-admin .btn-primary {
+  --bs-btn-bg: var(--roxo); --bs-btn-border-color: var(--roxo);
+  --bs-btn-hover-bg: var(--roxo-escuro); --bs-btn-hover-border-color: var(--roxo-escuro);
+  --bs-btn-active-bg: var(--roxo-escuro); --bs-btn-active-border-color: var(--roxo-escuro);
+  --bs-btn-disabled-bg: var(--roxo-claro); --bs-btn-disabled-border-color: var(--roxo-claro);
+}
+.painel-admin .btn-danger { --bs-btn-bg: var(--vermelho); --bs-btn-border-color: var(--vermelho); --bs-btn-hover-bg: #a83d3d; --bs-btn-hover-border-color: #a83d3d; }
+.painel-admin .btn-claro { background: var(--lilas); color: var(--roxo-escuro); border: none; }
+.painel-admin .btn-claro:hover, .painel-admin .btn-claro:focus { background: #e4dff5; color: var(--roxo-escuro); }
+.painel-admin .btn-perigo { background: #fbeaea; color: var(--vermelho); border: none; }
+.painel-admin .btn-perigo:hover, .painel-admin .btn-perigo:focus { background: #f5d6d6; color: var(--vermelho); }
+.painel-admin .btn-icone { width: 34px; height: 34px; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
+.painel-admin .btn-topo { background: rgba(255, 255, 255, .12); color: #fff; border: 1px solid rgba(255, 255, 255, .25); }
+.painel-admin .btn-topo:hover, .painel-admin .btn-topo:focus { background: rgba(255, 255, 255, .22); color: #fff; }
+
+.painel-admin .form-label, .painel-admin legend.form-label {
+  font-weight: 700; font-size: .74rem; color: var(--roxo-escuro); text-transform: uppercase; letter-spacing: .03em;
+}
+.painel-admin .form-control, .painel-admin .form-select { border-width: 1.5px; background-color: #fff; }
+.painel-admin .form-control:focus, .painel-admin .form-select:focus { border-color: var(--roxo-claro); }
+.painel-admin .form-control-color { height: 44px; padding: 4px; }
+
+.tela-login {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px;
+  background: var(--roxo);
+  background-image: radial-gradient(circle at 15% 20%, rgba(155, 194, 27, .18), transparent 40%),
+                    radial-gradient(circle at 85% 80%, rgba(255, 255, 255, .08), transparent 45%);
+}
+.cartao-login { background: #fff; border-radius: 24px; padding: 32px; width: 100%; max-width: 380px; box-shadow: 0 24px 60px rgba(36, 31, 61, .35); }
+.cartao-login .logo-login { height: 30px; margin-bottom: 22px; }
+.cartao-login h1 { font-size: 2rem; color: var(--roxo); margin: 0; }
+
+.topo-admin { background: var(--roxo); padding: 16px 0; position: sticky; top: 0; z-index: 1020; }
+.topo-admin-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.marca-admin { display: flex; align-items: center; gap: 14px; color: #fff; }
+.marca-admin img { height: 30px; }
+.marca-admin div { display: flex; flex-direction: column; padding-left: 14px; border-left: 1px solid rgba(255, 255, 255, .25); }
+.marca-admin .titulo-display { font-size: 1.25rem; line-height: 1; }
+.marca-admin .rotulo { color: #c7e67e; margin-top: 3px; }
+
+.painel-admin .abas {
+  display: inline-flex; flex-wrap: wrap; gap: 4px; background: #fff; border-radius: 999px; padding: 6px;
+  box-shadow: 0 4px 16px rgba(36, 31, 61, .06); border: none;
+}
+.painel-admin .abas .nav-link { border: none; border-radius: 999px; padding: 9px 20px; font-weight: 700; font-size: .86rem; color: var(--roxo-escuro); }
+.painel-admin .abas .nav-link:hover { background: var(--lilas); }
+.painel-admin .abas .nav-link.active { background: var(--roxo); color: #fff; }
+
+.barra-ferramentas { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.barra-ferramentas .form-select { width: auto; border-radius: 999px; font-weight: 600; }
+.titulo-secao { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 1.9rem; text-transform: uppercase; color: var(--roxo); margin: 0; }
+.contador { font-size: .8rem; font-weight: 700; background: var(--lilas); color: var(--roxo); padding: 3px 10px; border-radius: 999px; vertical-align: middle; }
+.titulo-bloco { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 1.35rem; text-transform: uppercase; color: var(--roxo); margin-bottom: 14px; }
+.bloco { background: #fff; border: 1px solid var(--linha); border-radius: 20px; padding: 24px; }
+
+.cartao { background: #fff; border: 1px solid var(--linha); border-radius: 20px; padding: 20px; height: 100%; display: flex; flex-direction: column; gap: 10px; transition: border-color .15s, box-shadow .15s; }
+.cartao:hover { border-color: var(--roxo-claro); box-shadow: 0 10px 24px rgba(78, 72, 142, .1); }
+.cartao h3 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 1.35rem; text-transform: uppercase; margin: 0; color: var(--tinta); }
+.cartao .desc { font-size: .84rem; color: var(--suave); line-height: 1.5; margin: 0; }
+.cartao .etiqueta { font-size: .7rem; font-weight: 700; color: #fff; background: var(--roxo); padding: 4px 10px; border-radius: 999px; width: fit-content; }
+.cartao .etiqueta.verde { background: var(--verde-escuro); }
+.cartao .meta { font-size: .75rem; font-weight: 600; color: #948cb8; }
+.cartao .mini-ficha { background: var(--lilas); border-radius: 12px; padding: 10px 14px; font-size: .74rem; display: flex; flex-direction: column; gap: 4px; margin: 0; }
+.cartao .mini-ficha div { display: flex; justify-content: space-between; gap: 8px; }
+.cartao .mini-ficha dt { color: #948cb8; font-weight: 500; }
+.cartao .mini-ficha dd { color: var(--roxo-escuro); font-weight: 700; text-align: right; margin: 0; }
+.cartao .acoes { display: flex; gap: 6px; margin-top: auto; padding-top: 6px; flex-wrap: wrap; }
+.vazio-admin { text-align: center; color: #948cb8; padding: 40px 16px; }
+
+.linha-spec { display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 8px; align-items: center; }
+@media (max-width: 575.98px) { .linha-spec { grid-template-columns: 1fr auto; } .linha-spec .spec-valor { grid-column: 1; } }
+
+.previa { border-radius: 20px; overflow: hidden; border: 1px solid var(--linha); background: var(--papel); }
+.previa .topo { position: static; }
+.previa .hero { padding: 28px 16px 32px; }
+.previa .hero h1 { font-size: 2.4rem; }
+.previa .categoria { padding-top: 28px; }
+.previa .categoria-head { margin-bottom: 16px; }
+.previa .categoria-head h2 { font-size: 1.8rem; }
+
+.painel-admin .table { --bs-table-bg: transparent; }
+.painel-admin .table th { font-size: .72rem; text-transform: uppercase; color: #948cb8; font-weight: 700; }
+.painel-admin .modal-content { border: none; border-radius: 22px; }
+.painel-admin .modal-title { font-size: 1.6rem; color: var(--roxo); }
+.painel-admin .toast { border-radius: 14px; }
+
+@media (max-width: 767.98px) {
+  .topo-admin { position: static; padding: 12px 0; }
+  .marca-admin img { height: 24px; }
+  .marca-admin div { display: none; }
+  .btn-topo span, .btn-topo .rotulo-botao { display: none; }
+  .btn-topo i { margin: 0 !important; }
+  .painel-admin .abas { display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; border-radius: 999px; width: 100%; }
+  .painel-admin .abas::-webkit-scrollbar { display: none; }
+  .painel-admin .abas .nav-link { white-space: nowrap; padding: 8px 16px; }
+  .barra-ferramentas > div { width: 100%; }
+  .barra-ferramentas .form-select { flex: 1; }
+}
