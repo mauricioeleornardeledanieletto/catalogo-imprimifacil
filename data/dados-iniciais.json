@@ -1,0 +1,508 @@
+{
+  "empresa": {
+    "nome": "Imprimifácil",
+    "titulo": "Comunicação visual e gráfica rápida,",
+    "destaque": "do jeito certo.",
+    "slogan": "Navegue pelas nossas categorias, escolha o serviço que precisa e peça o orçamento direto no WhatsApp.",
+    "sobre": "Comunicação visual e gráfica rápida em Nova Venécia-ES. Parceiros na divulgação e fortalecimento da comunicação dos nossos clientes.",
+    "whatsapp": "552737521250",
+    "endereco": "Nova Venécia — ES",
+    "horario": "Seg a Sex, 7h30–21h"
+  },
+  "categorias": [
+    {
+      "id": "comunicacao-visual",
+      "nome": "Comunicação Visual",
+      "descricao": "Fachadas, adesivos e sinalização com produção própria"
+    },
+    {
+      "id": "grafica-rapida",
+      "nome": "Gráfica Rápida",
+      "descricao": "Material impresso para o dia a dia do seu negócio"
+    },
+    {
+      "id": "impressao-copias",
+      "nome": "Impressão & Cópias",
+      "descricao": "Serviços rápidos de balcão para documentos e trabalhos"
+    },
+    {
+      "id": "servicos-tecnicos",
+      "nome": "Serviços Técnicos",
+      "descricao": "Plotagem, projetos e locação de equipamentos"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Adesivos de vitrine",
+      "categoria": "comunicacao-visual",
+      "descricao": "Comunicação visual para vitrines com recorte eletrônico ou impressão digital.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Vinil brilho / fosco"
+        },
+        {
+          "rotulo": "Aplicação",
+          "valor": "Interna ou externa"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "2–3 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar adesivo de vitrine"
+    },
+    {
+      "id": 2,
+      "nome": "Adesivos veiculares",
+      "categoria": "comunicacao-visual",
+      "descricao": "Envelopamento total, parcial ou personalizado para carros, motos e frotas.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Vinil brilho / fosco"
+        },
+        {
+          "rotulo": "Modalidade",
+          "valor": "Total, parcial, frota"
+        },
+        {
+          "rotulo": "Orçamento",
+          "valor": "Sob medida"
+        }
+      ],
+      "mensagem": "Quero orçar adesivo veicular"
+    },
+    {
+      "id": 3,
+      "nome": "Adesivos com recorte personalizados",
+      "categoria": "comunicacao-visual",
+      "descricao": "Formatos livres, letras avulsas e adesivos sob medida para produto ou decoração.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Vinil brilho / fosco"
+        },
+        {
+          "rotulo": "Qtd. mínima",
+          "valor": "Sob consulta"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–3 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar adesivos personalizados"
+    },
+    {
+      "id": 4,
+      "nome": "Lonas",
+      "categoria": "comunicacao-visual",
+      "descricao": "Impressão em lona para eventos, promoções e divulgação externa, com acabamento em ilhós.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Lona 380g"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": "Ilhós"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–2 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar Lonas"
+    },
+    {
+      "id": 5,
+      "nome": "Placas em PVC",
+      "categoria": "comunicacao-visual",
+      "descricao": "Sinalização interna e externa, placas informativas e de identificação com bom acabamento.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "PVC 3mm"
+        },
+        {
+          "rotulo": "Fixação",
+          "valor": "Parafuso, fita ou adesivo"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "2–3 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar placas em PVC"
+    },
+    {
+      "id": 6,
+      "nome": "Adesivo Refletivo",
+      "categoria": "comunicacao-visual",
+      "descricao": "Material de alta visibilidade, ideal para veículos, frotas, placas e sinalização.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Vinil Refletivo"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–3 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar adesivo refletivo"
+    },
+    {
+      "id": 7,
+      "nome": "Banners",
+      "categoria": "comunicacao-visual",
+      "descricao": "Material de comunicação visual para eventos, promoções e divulgação externa, com impressão de alta qualidade.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Lona 380g"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": "Bastão"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–2 dias úteis"
+        },
+        {
+          "rotulo": "Tamanhos",
+          "valor": "40x60cm | 60x90cm | 70x100cm | 80x120cm | 90x120cm | 100x100cm | 100x150cm | 100x200cm"
+        }
+      ],
+      "mensagem": "Quero orçar Banners"
+    },
+    {
+      "id": 8,
+      "nome": "Faixas",
+      "categoria": "comunicacao-visual",
+      "descricao": "Faixas personalizadas para divulgação de promoções, eventos, campanhas e informações, com impressão de alta qualidade.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Lona 380g"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": "Bastão"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–2 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar Faixas"
+    },
+    {
+      "id": 9,
+      "nome": "Ímãs para Veículos",
+      "categoria": "comunicacao-visual",
+      "descricao": "Material removível e personalizado para aplicação em portas e outras superfícies metálicas de veículos.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Adesivo Vinil com Manta Magnética"
+        },
+        {
+          "rotulo": "Tamanho",
+          "valor": "Até 30cm de largura"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "2–3 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar Ímãs para Veículos"
+    },
+    {
+      "id": 10,
+      "nome": "Rótulos",
+      "categoria": "comunicacao-visual",
+      "descricao": "Identificação de produtos com material resistente e acabamento profissional.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Vinil brilho / fosco"
+        },
+        {
+          "rotulo": "Formato",
+          "valor": "Redondo, quadrado, livre"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "2 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar Rótulos"
+    },
+    {
+      "id": 11,
+      "nome": "Cartões de visita",
+      "categoria": "grafica-rapida",
+      "descricao": "Papel couché, verniz ou laminação — a primeira impressão da sua marca.",
+      "specs": [
+        {
+          "rotulo": "Papel",
+          "valor": "Couché 300g"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": "Verniz / laminação/ Hot Stamping"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "7 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar cartões de visita"
+    },
+    {
+      "id": 12,
+      "nome": "Panfletos e folders",
+      "categoria": "grafica-rapida",
+      "descricao": "Divulgação impressa para promoções, campanhas e apresentação do seu negócio.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A4, A5, personalizado"
+        },
+        {
+          "rotulo": "Papel",
+          "valor": "Couché 150g–250g"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–2 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar panfletos ou folders"
+    },
+    {
+      "id": 13,
+      "nome": "Tags",
+      "categoria": "grafica-rapida",
+      "descricao": "Tags personalizadas para identificação de produtos, embalagens, peças e divulgação da sua marca.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Papel couchê 250g"
+        },
+        {
+          "rotulo": "Formato",
+          "valor": "Redondo, quadrado, livre"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": "Padrão furo"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "2 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar tag"
+    },
+    {
+      "id": 14,
+      "nome": "Cardápios",
+      "categoria": "grafica-rapida",
+      "descricao": "Materiais personalizados para apresentação de produtos e opções de estabelecimentos comerciais.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A3, A4"
+        },
+        {
+          "rotulo": "Papel",
+          "valor": "Couché 150g–250g"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "1–2 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar Cardápios"
+    },
+    {
+      "id": 15,
+      "nome": "Crachás",
+      "categoria": "grafica-rapida",
+      "descricao": "Crachás personalizados para identificação de colaboradores, eventos, instituições e equipes.",
+      "specs": [
+        {
+          "rotulo": "Material",
+          "valor": "Pvc"
+        },
+        {
+          "rotulo": "Tamanho",
+          "valor": "5,5 x 8,5 cm"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "7 dias úteis"
+        }
+      ],
+      "mensagem": "Quero orçar Crachás"
+    },
+    {
+      "id": 16,
+      "nome": "Impressão digital",
+      "categoria": "impressao-copias",
+      "descricao": "Impressão colorida ou preto e branco em diversos formatos e gramaturas de papel.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A4, A3, personalizado"
+        },
+        {
+          "rotulo": "Cor",
+          "valor": "P&B ou colorido"
+        },
+        {
+          "rotulo": "Entrega",
+          "valor": "Na hora"
+        }
+      ],
+      "mensagem": "Quero fazer impressão digital"
+    },
+    {
+      "id": 17,
+      "nome": "Cópias",
+      "categoria": "impressao-copias",
+      "descricao": "Cópias rápidas de documentos, apostilas e materiais avulsos.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A4, A3"
+        },
+        {
+          "rotulo": "Cor",
+          "valor": "P&B ou colorido"
+        },
+        {
+          "rotulo": "Entrega",
+          "valor": "Na hora"
+        }
+      ],
+      "mensagem": "Quero fazer cópias"
+    },
+    {
+      "id": 18,
+      "nome": "Encadernação",
+      "categoria": "impressao-copias",
+      "descricao": "Encadernação espiral ou wire-o para trabalhos, apostilas e projetos.",
+      "specs": [
+        {
+          "rotulo": "Tipo",
+          "valor": "Espiral"
+        },
+        {
+          "rotulo": "Capa",
+          "valor": "Transparente ou colorida"
+        },
+        {
+          "rotulo": "Entrega",
+          "valor": "Na hora"
+        }
+      ],
+      "mensagem": "Quero encadernar um material"
+    },
+    {
+      "id": 19,
+      "nome": "Plastificação",
+      "categoria": "impressao-copias",
+      "descricao": "Proteção e durabilidade para documentos, cardápios e materiais de uso frequente.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A4, A3"
+        },
+        {
+          "rotulo": "Acabamento",
+          "valor": "Brilho"
+        },
+        {
+          "rotulo": "Entrega",
+          "valor": "Na hora"
+        }
+      ],
+      "mensagem": "Quero plastificar um material"
+    },
+    {
+      "id": 20,
+      "nome": "Digitalização",
+      "categoria": "impressao-copias",
+      "descricao": "Digitalização de documentos, plantas e materiais em alta resolução.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A4 até A0"
+        },
+        {
+          "rotulo": "Saída",
+          "valor": "PDF ou imagem"
+        },
+        {
+          "rotulo": "Entrega",
+          "valor": "Mesmo dia"
+        }
+      ],
+      "mensagem": "Quero digitalizar um material"
+    },
+    {
+      "id": 21,
+      "nome": "Plotagem CAD",
+      "categoria": "servicos-tecnicos",
+      "descricao": "Impressão de plantas e desenhos técnicos em grande formato para arquitetura e engenharia.",
+      "specs": [
+        {
+          "rotulo": "Formato",
+          "valor": "A1, A0, personalizado"
+        },
+        {
+          "rotulo": "Papel",
+          "valor": "Sulfite ou vegetal"
+        },
+        {
+          "rotulo": "Prazo médio",
+          "valor": "Mesmo dia"
+        }
+      ],
+      "mensagem": "Quero fazer plotagem CAD"
+    },
+    {
+      "id": 22,
+      "nome": "Locação de impressoras",
+      "categoria": "servicos-tecnicos",
+      "descricao": "Locação mensal de impressoras para empresas, com manutenção inclusa.",
+      "specs": [
+        {
+          "rotulo": "Contrato",
+          "valor": "Mensal"
+        },
+        {
+          "rotulo": "Manutenção",
+          "valor": "Inclusa"
+        },
+        {
+          "rotulo": "Orçamento",
+          "valor": "Sob consulta"
+        }
+      ],
+      "mensagem": "Quero saber sobre locação de impressoras"
+    }
+  ],
+  "tema": {
+    "corPrimaria": "#4e488e",
+    "corDestaque": "#9bc21b",
+    "corFundo": "#fbfaf8",
+    "corTexto": "#241f3d"
+  }
+}
