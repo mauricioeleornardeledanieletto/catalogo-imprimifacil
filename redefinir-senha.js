@@ -1,5 +1,5 @@
 // pra usar: npm run redefinir-senha -- <usuario> <nova-senha>
-// precisa do MONGODB_URI no arquivo .env (o mesmo endereço do banco usado no site)
+// precisa do MONGODB_URI no .env
 try { process.loadEnvFile(); } catch {}
 
 const { conectar } = require("./banco");

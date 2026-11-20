@@ -1,4 +1,4 @@
-// lê o arquivo .env no computador (na Vercel as variáveis vêm do painel dela)
+// pega as variáveis do .env (na vercel elas vêm do painel dela)
 try { process.loadEnvFile(); } catch {}
 
 const express = require("express");
@@ -11,7 +11,7 @@ const app = express();
 const PORTA = process.env.PORT || 3000;
 const EM_PRODUCAO = Boolean(process.env.VERCEL || process.env.NODE_ENV === "production");
 
-// endereço do painel: em produção vem da variável ADMIN_CAMINHO, pra não ficar no código público
+// endereço do painel vem do .env pra não ficar público no github
 const CAMINHO_ADMIN = "/" + (process.env.ADMIN_CAMINHO || "gestao-imprimifacil-7k2p").replace(/^\/+/, "");
 const PAGINA_ADMIN = path.join(__dirname, "privado", "admin.html");
 
@@ -25,14 +25,12 @@ const TEMA_PADRAO = {
 };
 const CAMPOS_COR = Object.keys(TEMA_PADRAO);
 
-// na hospedagem todo mundo chega pelo proxy, isso faz o req.ip ser o IP real do visitante
+// pega o ip real do visitante (a vercel fica na frente como proxy)
 app.set("trust proxy", true);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-// ----- token de login -----
-// o token leva o id do usuário e a validade, assinados com uma chave secreta.
-// assim qualquer cópia do servidor consegue conferir o login sem guardar sessão na memória.
+// token assinado: qualquer cópia do servidor consegue conferir o login sem guardar sessão
 function segredo() {
   if (process.env.SESSAO_SEGREDO) return process.env.SESSAO_SEGREDO;
   if (EM_PRODUCAO) throw new Error("Configure a variável de ambiente SESSAO_SEGREDO.");
@@ -65,7 +63,6 @@ async function exigirLogin(req, res, next) {
   next();
 }
 
-// ----- funções auxiliares -----
 const SEM_ID_DO_MONGO = { projection: { _id: 0 } };
 
 function usuarioPublico(u) {
@@ -131,11 +128,9 @@ function validarDadosUsuario(body) {
   return { nome, usuario };
 }
 
-// ----- painel -----
 // painel fica fora da public, só abre por esse endereço
 app.get(CAMINHO_ADMIN, (req, res) => res.sendFile(PAGINA_ADMIN));
 
-// ----- rotas públicas -----
 app.get("/api/empresa", async (req, res) => {
   res.json((await lerConfiguracoes(await conectar())).empresa);
 });
@@ -177,8 +172,7 @@ app.get("/api/produtos/:id", async (req, res) => {
   res.json(produto);
 });
 
-// ----- login -----
-// errou 5 vezes = bloqueia o IP por 15 min (guardado no banco pra valer em todas as cópias do servidor)
+// errou 5 vezes = bloqueia o ip por 15 min (fica no banco pra valer em todas as cópias)
 const MAX_TENTATIVAS = 5;
 const TEMPO_BLOQUEIO = 15 * 60 * 1000;
 
@@ -210,10 +204,9 @@ app.post("/api/login", async (req, res) => {
   res.json({ token: criarToken(usuario.id), usuario: usuarioPublico(usuario) });
 });
 
-// o token fica só no navegador, então sair é só ele apagar o token
+// o token fica no navegador, sair é só apagar ele
 app.post("/api/logout", (req, res) => res.json({ ok: true }));
 
-// ----- textos, contato e cores -----
 app.put("/api/empresa", exigirLogin, async (req, res) => {
   const db = await conectar();
   const { empresa } = await lerConfiguracoes(db);
@@ -256,7 +249,6 @@ app.post("/api/tema/restaurar", exigirLogin, async (req, res) => {
   res.json(TEMA_PADRAO);
 });
 
-// ----- produtos -----
 app.post("/api/produtos", exigirLogin, async (req, res) => {
   const db = await conectar();
   const { produto, erro } = await validarProduto(req.body, db);
@@ -285,7 +277,6 @@ app.delete("/api/produtos/:id", exigirLogin, async (req, res) => {
   res.json({ ok: true });
 });
 
-// ----- categorias -----
 app.post("/api/categorias", exigirLogin, async (req, res) => {
   const db = await conectar();
   const nome = texto(req.body.nome, 60);
@@ -316,7 +307,7 @@ app.put("/api/categorias/:id", exigirLogin, async (req, res) => {
   res.json(categoria);
 });
 
-// -1 sobe, 1 desce (troca a ordem com a categoria vizinha)
+// -1 sobe, 1 desce
 app.put("/api/categorias/:id/posicao", exigirLogin, async (req, res) => {
   const db = await conectar();
   const colecao = db.collection("categorias");
@@ -342,7 +333,6 @@ app.delete("/api/categorias/:id", exigirLogin, async (req, res) => {
   res.json({ ok: true });
 });
 
-// ----- minha conta -----
 app.get("/api/eu", exigirLogin, (req, res) => res.json(usuarioPublico(req.usuario)));
 
 app.put("/api/eu/senha", exigirLogin, async (req, res) => {
@@ -357,7 +347,6 @@ app.put("/api/eu/senha", exigirLogin, async (req, res) => {
   res.json({ ok: true });
 });
 
-// ----- usuários -----
 app.get("/api/usuarios", exigirLogin, async (req, res) => {
   const db = await conectar();
   const usuarios = await db.collection("usuarios").find().sort({ id: 1 }).toArray();
@@ -404,7 +393,6 @@ app.delete("/api/usuarios/:id", exigirLogin, async (req, res) => {
   res.json({ ok: true });
 });
 
-// ----- erros -----
 app.use("/api", (req, res) => res.status(404).json({ erro: "Rota não encontrada" }));
 
 app.use((err, req, res, next) => {
@@ -415,7 +403,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ erro: "Erro interno no servidor" });
 });
 
-// no computador sobe o servidor; na Vercel ela mesma usa o app exportado
+// no pc sobe na porta 3000, na vercel ela usa o app exportado
 if (require.main === module) {
   app.listen(PORTA, () => {
     console.log(`Catálogo Imprimifácil rodando em http://localhost:${PORTA}`);

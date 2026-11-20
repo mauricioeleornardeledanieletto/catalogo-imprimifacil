@@ -2,7 +2,7 @@ let token = sessionStorage.getItem("token");
 let categorias = [];
 let produtos = [];
 let usuarios = [];
-let eu = null; // usuário logado
+let eu = null;
 
 const modalProduto = new bootstrap.Modal(document.getElementById("modal-produto"));
 const modalCategoria = new bootstrap.Modal(document.getElementById("modal-categoria"));
@@ -111,7 +111,7 @@ const filtroCategoria = document.getElementById("filtro-categoria");
 async function carregarProdutos() {
   produtos = await api("/api/produtos");
   exibirProdutos();
-  exibirCategorias(); // pra atualizar a qtd de produtos de cada categoria
+  exibirCategorias(); // atualiza a qtd de produtos de cada categoria
 }
 
 function exibirProdutos() {

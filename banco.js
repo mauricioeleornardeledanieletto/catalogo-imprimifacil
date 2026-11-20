@@ -3,7 +3,7 @@ const path = require("path");
 const { MongoClient } = require("mongodb");
 const { gerarHash } = require("./senhas");
 
-// a conexão fica guardada pra ser reaproveitada entre as requisições
+// guarda a conexão pra reaproveitar
 let conexao = null;
 
 function conectar() {
@@ -23,7 +23,7 @@ async function abrirConexao() {
     if (process.env.VERCEL || process.env.NODE_ENV === "production") {
       throw new Error("Configure a variável de ambiente MONGODB_URI com o endereço do MongoDB Atlas.");
     }
-    // sem MONGODB_URI no computador: sobe um mongo temporário só pra testar
+    // sem MONGODB_URI sobe um mongo temporário só pra testar
     const pacote = "mongodb-memory-server-core";
     const { MongoMemoryServer } = require(pacote);
     const servidor = await MongoMemoryServer.create();
@@ -38,7 +38,7 @@ async function abrirConexao() {
   return db;
 }
 
-// cria os índices e, se o banco estiver vazio, coloca os dados iniciais e o usuário admin
+// se o banco tiver vazio coloca os dados iniciais e cria o admin
 async function prepararBanco(db) {
   await db.collection("produtos").createIndex({ id: 1 }, { unique: true });
   await db.collection("categorias").createIndex({ id: 1 }, { unique: true });
@@ -60,7 +60,7 @@ async function prepararBanco(db) {
       console.log('Usuário "admin" criado. Troque a senha no painel.');
     }
   } catch (erro) {
-    // 11000 = registro duplicado: outra instância do servidor já preencheu o banco ao mesmo tempo
+    // 11000 = duplicado, outra cópia do servidor já preencheu
     if (erro.code !== 11000) throw erro;
   }
 }

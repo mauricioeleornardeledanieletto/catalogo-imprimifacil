@@ -1,17 +1,17 @@
-# dependências (recriadas com npm install)
+# dependências (o npm install recria)
 node_modules/
 
-# variáveis secretas (endereço do banco, chave do login...)
+# senhas e chaves
 .env
 
-# configurações da vercel no computador
+# vercel
 .vercel/
 
-# configurações locais do editor
+# editor
 .claude/
 .vscode/
 
-# arquivos temporários e do sistema
+# temporários
 *.tmp
 *.log
 .DS_Store
