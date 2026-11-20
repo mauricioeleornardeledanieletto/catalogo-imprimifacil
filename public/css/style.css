@@ -162,6 +162,14 @@ html { scroll-behavior: smooth; }
 }
 .site .flutuante:hover { transform: scale(1.07); background: var(--verde-hover); color: var(--tinta); }
 
+/* notebook pequeno: aperta o menu pra caber tudo na linha */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .site .topo-inner { gap: 10px; }
+  .site .logo img { height: 30px; }
+  .site .menu-cats a { padding: 9px 10px; font-size: .8rem; }
+  .site .topo-inner > .btn-zap { padding: 10px 14px; font-size: .8rem; }
+}
+
 @media (max-width: 991.98px) {
   .site .flutuante { display: flex; }
   .site .topo-inner { position: relative; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
